@@ -43,14 +43,17 @@ pip install -r requirements.txt
 **Set Environment Variables**
 
 Create a `.env` file in the root directory:
-
-SNOWFLAKE_ACCOUNT=your_account
+{
+  SNOWFLAKE_ACCOUNT=your_account
 SNOWFLAKE_USER=your_user
 SNOWFLAKE_PASSWORD=your_password
 SNOWFLAKE_ROLE=your_role
 SNOWFLAKE_WAREHOUSE=your_wh
 SNOWFLAKE_DATABASE=your_db
 SNOWFLAKE_SCHEMA=your_schema
+}
+
+
 
 **Run the App**
 
