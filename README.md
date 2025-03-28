@@ -1,5 +1,3 @@
-Here is a clean, emoji-free version of your `README.md`, keeping the tone professional and the format simple:
-
 ---
 
 ```markdown
@@ -18,28 +16,56 @@ This is an end-to-end insurance claim processing application built using agentic
 - Mistral generates professional customer-facing decision emails
 - LangGraph manages workflow step-by-step with full state tracking
 
+---
+
+## Tech Stack
+
+| Component       | Tool / Service                          |
+|----------------|------------------------------------------|
+| Workflow Engine | LangGraph (LangChain)                   |
+| Document Parsing| Snowflake Cortex Document AI            |
+| Image + Text AI | Claude 3 Sonnet (via Bedrock)           |
+| Email Generator | Mistral 7B Instruct (via Bedrock)       |
+| Frontend UI     | Streamlit                               |
+| Database        | Snowflake                               |
+| Language        | Python 3.10+                             |
+
+---
+
+## Project Structure
+
+```
+insurance_agentic_ai/
+├── backend_logic.py       # LangGraph workflow and logic
+├── frontend_app.py        # Streamlit UI for uploading and results
+├── .env                   # Environment variables (not checked into git)
+├── .gitignore
+└── README.md
+```
+
+---
 
 ## Getting Started
 
 ### 1. Clone the Repository
 
-
+```bash
 git clone https://github.com/curious-bigcat/insurance_agentic_ai.git
 cd insurance_agentic_ai
-
+```
 
 ### 2. Set Up a Virtual Environment
 
-
+```bash
 python3 -m venv venv
 source venv/bin/activate
-
+```
 
 ### 3. Install Dependencies
 
-
+```bash
 pip install -r requirements.txt
-
+```
 
 ### 4. Set Environment Variables
 
@@ -57,15 +83,15 @@ SNOWFLAKE_SCHEMA=your_schema
 
 Or export them directly in terminal:
 
-
+```bash
 export SNOWFLAKE_ACCOUNT=...
-
+```
 
 ### 5. Run the Application
 
-
+```bash
 streamlit run frontend_app.py
-
+```
 
 ---
 
@@ -113,10 +139,3 @@ streamlit run frontend_app.py
 ---
 
 ## Maintainer
-
-Created and maintained by [@curious-bigcat](https://github.com/curious-bigcat)
-
-Please open an issue or pull request if you’d like to contribute or have any questions.
-```
-
-Would you like me to save this directly into your project folder as `README.md`?
