@@ -22,18 +22,6 @@ This is an end-to-end insurance claim processing application built using agentic
 
 
 
----
-
-## Project Structure
-
-```
-insurance_agentic_ai/
-├── backend_logic.py       # LangGraph workflow and logic
-├── frontend_app.py        # Streamlit UI for uploading and results
-├── .env                   # Environment variables (not checked into git)
-├── .gitignore
-└── README.md
-```
 
 ---
 
