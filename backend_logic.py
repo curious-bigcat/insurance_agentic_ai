@@ -14,6 +14,10 @@ from langchain_core.messages import HumanMessage
 from langchain_community.chat_models import BedrockChat
 from langgraph.graph import StateGraph, START, END
 
+from dotenv import load_dotenv
+load_dotenv()
+
+
 # Constants
 LOCAL_PATH = "/tmp"
 STAGE_NAME = "@doc_ai_stage"
