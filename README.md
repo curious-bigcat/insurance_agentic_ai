@@ -18,12 +18,6 @@ This is an end-to-end insurance claim processing application built using agentic
 - Mistral generates professional customer-facing decision emails
 - LangGraph manages workflow step-by-step with full state tracking
 
----
-
-
-
-
----
 
 ## Getting Started
 
