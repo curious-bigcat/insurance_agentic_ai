@@ -30,16 +30,16 @@ cd insurance_agentic_ai
 
 ### 2. Set Up a Virtual Environment
 
-```bash
+
 python3 -m venv venv
 source venv/bin/activate
-```
+
 
 ### 3. Install Dependencies
 
-```bash
+
 pip install -r requirements.txt
-```
+
 
 ### 4. Set Environment Variables
 
@@ -57,15 +57,15 @@ SNOWFLAKE_SCHEMA=your_schema
 
 Or export them directly in terminal:
 
-```bash
+
 export SNOWFLAKE_ACCOUNT=...
-```
+
 
 ### 5. Run the Application
 
-```bash
+
 streamlit run frontend_app.py
-```
+
 
 ---
 
