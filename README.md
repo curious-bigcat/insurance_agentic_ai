@@ -23,10 +23,10 @@ This is an end-to-end insurance claim processing application built using agentic
 
 ### 1. Clone the Repository
 
-```bash
+
 git clone https://github.com/curious-bigcat/insurance_agentic_ai.git
 cd insurance_agentic_ai
-```
+
 
 ### 2. Set Up a Virtual Environment
 
