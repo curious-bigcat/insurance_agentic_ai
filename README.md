@@ -1,74 +1,107 @@
-**Agentic Insurance Claim Processor**
+Here is a clean, emoji-free version of your `README.md`, keeping the tone professional and the format simple:
 
-A smart, end-to-end insurance claim processing app using LangGraph, Snowflake Cortex Document AI, Claude Vision, and Mistral — all wrapped in a clean Streamlit UI.
+---
+
+```markdown
+# Agentic Insurance Claim Processor
+
+This is an end-to-end insurance claim processing application built using agentic AI principles. It processes a driver’s license, a claim form, and a car damage photo through a structured workflow. Each step is handled by an intelligent component: document extraction using Snowflake Cortex Document AI, image and text analysis using Claude (via Amazon Bedrock), policy validation using Snowflake queries, and decision email generation using Mistral. The workflow is managed using LangGraph, simulating how a human agent would evaluate and decide on claims.
+
+---
+
+## Features
+
+- Extracts data from driver's license, claim form, and car image
+- Uses Snowflake Cortex for structured document field extraction
+- Claude performs car image analysis and cross-document comparison
+- Snowflake is queried for policy details using customer ID
+- Mistral generates professional customer-facing decision emails
+- LangGraph manages workflow step-by-step with full state tracking
+
+---
 
 
 
-**Project Summary**
+---
 
-I had the opportunity to build an end-to-end insurance claim processor using agentic AI principles. The system guides uploaded documents—a driver’s license, a claim form, and a car damage photo—through a structured workflow powered by LangGraph. Each step acts as an intelligent agent: Snowflake Cortex extracts data from documents, Claude analyzes the car image and performs multi-source comparisons, and Snowflake verifies policy validity. Finally, Mistral generates a professional email response based on the claim outcome. The goal was to simulate how a thoughtful human agent would handle claims—accurately, step-by-step—with transparency and automation.
+## Project Structure
 
+```
+insurance_agentic_ai/
+├── backend_logic.py       # LangGraph workflow and logic
+├── frontend_app.py        # Streamlit UI for uploading and results
+├── .env                   # Environment variables (not checked into git)
+├── .gitignore
+└── README.md
+```
 
-**Features**
+---
 
-Extracts info from driver's license, claim form, and car photo
-LangGraph manages each step like an agent (upload → extract → analyze → compare)
-**Snowflake Document AI** for structured field extraction
-Claude (via Amazon Bedrock) performs intelligent visual + text-based comparisons
-Verifies policy validity by querying Snowflake with customer ID
-Mistral writes an email explaining the final claim decision
+## Getting Started
 
+### 1. Clone the Repository
 
-
-
-**Getting Started**
-
-Clone the Repository
+```bash
 git clone https://github.com/curious-bigcat/insurance_agentic_ai.git
 cd insurance_agentic_ai
+```
 
+### 2. Set Up a Virtual Environment
 
-**Create Virtual Environment**
-
-
+```bash
 python3 -m venv venv
 source venv/bin/activate
+```
 
+### 3. Install Dependencies
 
-**Install Dependencies**
-
+```bash
 pip install -r requirements.txt
+```
 
-
-**Set Environment Variables**
+### 4. Set Environment Variables
 
 Create a `.env` file in the root directory:
-{
-  SNOWFLAKE_ACCOUNT=your_account
+
+```
+SNOWFLAKE_ACCOUNT=your_account
 SNOWFLAKE_USER=your_user
 SNOWFLAKE_PASSWORD=your_password
 SNOWFLAKE_ROLE=your_role
-SNOWFLAKE_WAREHOUSE=your_wh
-SNOWFLAKE_DATABASE=your_db
+SNOWFLAKE_WAREHOUSE=your_warehouse
+SNOWFLAKE_DATABASE=your_database
 SNOWFLAKE_SCHEMA=your_schema
-}
+```
 
+Or export them directly in terminal:
 
+```bash
+export SNOWFLAKE_ACCOUNT=...
+```
 
-**Run the App**
+### 5. Run the Application
 
+```bash
+streamlit run frontend_app.py
+```
 
+---
 
+## Workflow Overview
 
-**Workflow Steps**
+1. Upload documents
+2. Extract driver's license data
+3. Extract claim form data
+4. Analyze car image
+5. Compare fields across all documents
+6. Check if policy is valid for the incident date
+7. Generate final decision email
 
-- Uploaded  
-- DL Extracted  
-- Claim Extracted  
-- Car Analyzed  
-- Merged & Compared  
+---
 
-**Comparison Result**
+## Sample Output
+
+### Comparison Result
 
 ```json
 {
@@ -79,16 +112,29 @@ SNOWFLAKE_SCHEMA=your_schema
 }
 ```
 
-**Email Generated (Mistral)**
+### Email Example
 
 > Dear Valued Customer,  
-> We have reviewed your insurance claim filed on **Feb 14, 2025** under a valid policy ending **June 18, 2025**.  
-> Based on our review of your documents and car image, your claim has been **accepted**.  
-> Thank you for choosing us.
+> We have reviewed your insurance claim filed on February 14, 2025, under a policy ending June 18, 2025.  
+> Based on the submitted documents and assessment, your claim has been accepted.  
+> Thank you for choosing our services.
 
 ---
 
+## Planned Enhancements
 
-**Author & Maintainer**
+- Add PDF summary export
+- Audit log for claims
+- Docker/Streamlit Cloud deployment support
+- Agent-specific logs and scoring
 
-Built with ❤ [@curious-bigcat](https://github.com/curious-bigcat)
+---
+
+## Maintainer
+
+Created and maintained by [@curious-bigcat](https://github.com/curious-bigcat)
+
+Please open an issue or pull request if you’d like to contribute or have any questions.
+```
+
+Would you like me to save this directly into your project folder as `README.md`?
